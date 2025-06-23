@@ -7,9 +7,13 @@ public class BMICalcPractice {
 		double height, weight, BMI = 0;
 		String userInput;
 		boolean userChoice = false;
+		String userName;
 		int measurement = 0;
 		
 		System.out.println("Hi, I'm going to help you find out your BMI!");
+
+		System.out.println("What is your name?");
+		userName = scnr.next();
 
 		System.out.println("First, are you using metric or US customary?");
 		System.out.println("1. Metric");
@@ -32,11 +36,11 @@ public class BMICalcPractice {
 
 			case 1:
 
-				System.out.println("How tall are you in meters?");
+				System.out.println("\nHow tall are you in meters?");
 				userInput = scnr.next();
 				height = Double.parseDouble(userInput);
 		
-				System.out.println("How much do you weigh in kg?");
+				System.out.println("\nHow much do you weigh in kg?");
 				userInput = scnr.next();
 				weight = Double.parseDouble(userInput);
 		
@@ -45,10 +49,10 @@ public class BMICalcPractice {
 			
 			case 2:
 
-				System.out.println("How tall are you in inches?");
+				System.out.println("\nHow tall are you in inches?");
 				height = Double.parseDouble(scnr.next());
 
-				System.out.println("How much do you weigh in pounds?");
+				System.out.println("\nHow much do you weigh in pounds?");
 				weight = Double.parseDouble(scnr.next());
 
 				BMI = (weight * 703) / (height * height);
@@ -60,7 +64,9 @@ public class BMICalcPractice {
 
 		}
 		
-		System.out.printf("Your BMI is %.2f", BMI);
+		System.out.println("\nWell, " + userName);
+		System.out.printf("Your BMI is %.2f%n", BMI);
+		System.out.println("Thank you for using my BMI calculator!");
 
 		scnr.close();
 	}
