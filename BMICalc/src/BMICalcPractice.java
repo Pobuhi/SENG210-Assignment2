@@ -5,6 +5,7 @@ public class BMICalcPractice {
 		
 		Scanner scnr = new Scanner(System.in);
 		double height, weight, BMI = 0;
+		String userInput;
 		boolean userChoice = false;
 		int measurement = 0;
 		
@@ -32,10 +33,12 @@ public class BMICalcPractice {
 			case 1:
 
 				System.out.println("How tall are you in meters?");
-				height = Double.parseDouble(scnr.next());
+				userInput = scnr.next();
+				height = Double.parseDouble(userInput);
 		
 				System.out.println("How much do you weigh in kg?");
-				weight = Double.parseDouble(scnr.next());
+				userInput = scnr.next();
+				weight = Double.parseDouble(userInput);
 		
 				BMI = weight / (height * height);
 				break;
@@ -57,7 +60,7 @@ public class BMICalcPractice {
 
 		}
 		
-		System.out.print("Your BMI is " + BMI);
+		System.out.printf("Your BMI is %.2f", BMI);
 
 		scnr.close();
 	}
