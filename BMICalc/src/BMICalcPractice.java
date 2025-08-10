@@ -78,7 +78,13 @@ public class BMICalcPractice {
 				userChoice = false;
 				online = true;
 			}
-			else online = false;
+			else {
+
+				online = false;
+
+				System.out.println("This is a test for branch functionality");
+
+			}
 
 		}
 
