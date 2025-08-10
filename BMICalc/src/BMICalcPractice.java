@@ -8,6 +8,7 @@ public class BMICalcPractice {
 		String userInput;
 		boolean userChoice = false;
 		boolean online = true;
+		String existAns;
 		String userName;
 		int measurement = 0;
 		
@@ -17,7 +18,7 @@ public class BMICalcPractice {
 		userName = scnr.next();
 
 		while (online) {
-			
+
 			System.out.println("First, are you using metric or US customary?");
 			System.out.println("1. Metric");
 			System.out.println("2. Us Customary");
@@ -69,6 +70,15 @@ public class BMICalcPractice {
 			
 			System.out.println("\nWell, " + userName);
 			System.out.printf("Your BMI is %.2f%n", BMI);
+			System.out.println();
+
+			System.out.print("Would you like to use the calculator again? Yes or No:");
+			existAns = scnr.next();
+			if (existAns.toLowerCase().equals("yes") || existAns.toLowerCase().equals("ye") || existAns.toLowerCase().equals("y")) {
+				userChoice = false;
+				online = true;
+			}
+			else online = false;
 
 		}
 
